@@ -15,9 +15,13 @@
    int v = int(random(verbs.length-1));
    int a = int(random(adjectives.length-1));
    for (int i = 0 ; i< lines.length; i++) {
+   lines[i] = lines[i].replaceAll("<noun>", nouns[n]);
+   lines[i] = lines[i].replaceAll("<verb>", verbs[v]);
+   lines[i] = lines[i].replaceAll("<adjective>", adjectives[a]);
    println(lines[i]);
-   lines[i] = lines[i].replaceAll("<noun>", nouns[i]);
  }
+   
+
  
  
  
